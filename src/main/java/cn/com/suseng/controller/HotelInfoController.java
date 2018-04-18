@@ -101,4 +101,12 @@ public class HotelInfoController {
 		return SysResult.ok(dc);
 	}
 	
+	//这是测试git的性能和使用的
+	
+	@RequestMapping(value="/ismembers",method=RequestMethod.GET)
+	@ResponseBody
+	public SysResult ismembershipsornot(String userName,String password) throws Exception{
+		Double dc = isMember.getmenberinfo(userName, password);
+		return SysResult.ok(dc);
+	}
 }
